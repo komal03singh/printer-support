@@ -1,103 +1,330 @@
+"use client";
 import Image from "next/image";
+import { VscDesktopDownload } from "react-icons/vsc";
+import { GrDocumentTime } from "react-icons/gr";
+import { BiSupport } from "react-icons/bi";
+import { RiChatSmile2Fill } from "react-icons/ri";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { SlArrowRight } from "react-icons/sl";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const images = ["/NSLaser.avif", "/Envy.avif", "/Deskjet.avif"];
+  const slider = ["/slider-1.webp","/slider-2.webp"]
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [index, setIndex] = useState(0);
+  const [sliderIndex, setSliderIndex] = useState(0)
+
+  // Auto-change index every 3s
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSliderIndex((prev) => (prev + 1) % slider.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [slider.length]);
+
+  return (
+    <main>
+      <div className="h-auto w-full">
+        <div className="lg:relative h-screen w-full">
+          <div className="lg:relative w-full lg:w-[88%] h-full text-white flex flex-col lg:flex-row lg:h-3/4 lg:mt-6 lg:mx-20">
+            <div className="flex flex-col gap-4 relative lg:absolute lg:left-0 lg:top-0 bg-[#3871F2] w-full h-full lg:[clip-path:polygon(70%_0,60%_70%,60%_100%,0_100%,0_0)] lg:z-10 ">
+              <div className="flex flex-col lg:flex-row justify-center ml-4 lg:ml-12 gap-3 lg:gap-6 lg:w-1/2 mt-6 lg:mt-12">
+                <Image
+                  src="/hp-icon.png"
+                  alt="logo"
+                  width={100}
+                  height={100}
+                ></Image>
+                <div className="flex flex-col justify-center">
+                  <h1 className="text-2xl px-2 lg:text-4xl font-semibold">
+                    Exclusive Printer Support
+                  </h1>
+                  <p className="text-base px-2 lg:text-xl font-extralight pt-2">
+                    Call now to speak directly with a live HP+ support expert.
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center lg:hidden">
+                <Image
+                  src="/hero-image.webp"
+                  alt="logo"
+                  height={340}
+                  width={350}
+                ></Image>
+              </div>
+            </div>
+            <div className="hidden lg:flex lg:absolute lg:right-0 lg:top-0 w-2/5 lg:h-full">
+              <Image
+                className="object-cover -z-10"
+                src="/hero-image.webp"
+                alt="logo"
+                fill={true}
+              ></Image>
+            </div>
+          </div>
+          <div className="flex flex-col justify-center items-center absolute bottom-1 left-2 lg:bottom-45 lg:left-32 w-[96%] h-[22%] lg:w-[54%] lg:h-[34%] bg-white lg:z-50 rounded-lg">
+            <div className="h-3/4 flex flex-col justify-center items-center">
+              <ul className="flex flex-col gap-2 px-4 text-xs lg:text-base list-disc mx-2 lg:mx-8">
+                <li>
+                  Experience Fast and Complimentary Support from Our Experts.
+                  We're here to help!
+                </li>
+                <li>
+                  Our priority is to take care of you. Call us to resolve
+                  questions about HP+ and receive assistance with printer setup.
+                </li>
+              </ul>
+              <Link href="https://globaltecheye.com/blogs/printer/fix-printer-scan.php">
+                <p className="px-4 text-xs lg:text-base text-blue-400 flex justify-center items-center gap-1 mt-3 lg:mt-6">
+                Visit the FAQ page for help. Troubleshooting, and additional information
+                <span className="text-xs">
+                  <SlArrowRight />
+                </span>
+                </p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="hidden lg:flex gap-16 flex-row justify-center items-center h-1/4 w-full rounded-t-2xl">
+            <div className="p-2 flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <VscDesktopDownload className="text-5xl text-[#080880]" />
+              <p className="p-2 text-base font-light">Download Drivers</p>
+            </div>
+            <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <GrDocumentTime className="text-5xl text-[#080880]" />
+              <p className="p-2 text-base font-light">Check Warranty Status</p>
+            </div>
+            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <BiSupport className="text-6xl text-[#080880]" />
+              <p className="p-2 text-base font-light">Contact Us</p>
+            </div>
+            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <RiChatSmile2Fill className="text-6xl text-[#080880]" />
+              <p className="p-2 text-base font-light">Diagnose and Fix</p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="flex flex-col gap-6 h-screen w-full">
+          <h3 className="text-2xl lg:text-5xl font-semibold text-[#080880] text-center pt-10">
+            How to set up your printer?
+          </h3>
+          <div className="flex flex-col lg:flex-row h-3/4 w-full">
+            <div className="flex justify-center items-center w-full h-1/2 lg:h-full lg:w-1/2">
+              <Image
+                className="lg:rounded-2xl"
+                src="/Printer_feature.avif"
+                alt="printer"
+                height={400}
+                width={600}
+              ></Image>
+            </div>
+            <div className="flex flex-col lg:justify-center lg:items-center h-1/2 w-full lg:h-full lg:w-1/2">
+              <div className="lg:h-1/2 h-[90%] w-full mx-6 border-l-3 border-[#080880] px-6 py-3 my-3 lg:my-0">
+                <h3 className="text-base lg:text-xl font-light">
+                  Access Printer Setup to walk through the process of
+                  installation, configuration, and registration of your printer.
+                </h3>
+                <button className="flex items-center gap-2 text-base lg:text-lg font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
+                  Printer Setup{" "}
+                  <span className="text-sm">
+                    <SlArrowRight />
+                  </span>
+                </button>
+                <div className=" mt-5 lg:mt-10">
+                  <p className="text-base lg:text-xl font-medium">
+                    Want more Support?
+                  </p>
+                  <p className="text-[#080880] underline">
+                    Get instant support here
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="flex lg:hidden justify-center items-center h-1/5 w-full mb-3">
+            <div className="p-2 flex flex-col justify-center items-center gap-1 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <VscDesktopDownload className="text-3xl text-[#080880]" />
+              <p className="py-1 text-sm font-light">Download Drivers</p>
+            </div>
+            <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <GrDocumentTime className="text-3xl text-[#080880]" />
+              <p className="py-1 text-sm font-light">Check Warranty </p>
+            </div>
+            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <BiSupport className="text-3xl text-[#080880]" />
+              <p className="py-1 text-sm font-light">Contact Us</p>
+            </div>
+            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <RiChatSmile2Fill className="text-3xl text-[#080880]" />
+              <p className="py-1 text-sm font-light">Diagnose and Fix</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center gap-6 h-screen w-full px-4">
+          <h2 className="text-5xl text-[#080880] font-semibold pt-5">
+            We provide solutions for
+          </h2>
+
+          <div className="text-xl font-extralight">
+            Storage | Software Download | Installation Issues | Network
+            Connectivity Related Issues
+          </div>
+
+          <div className="grid grid-cols-3 items-center h-3/4 w-320 mt-2 px-4 gap-6">
+            <div className="flex flex-col items-center h-[90%] px-4 py-2">
+              <Image
+                className="h-34"
+                src="/window-11.png"
+                height={200}
+                width={300}
+                alt="windows-11"
+              ></Image>
+              <h4 className=" text-2xl font-medium h-20 px-2">
+                Get Instant Support for Laptop & Desktop
+              </h4>
+              <p className=" text-base font-extralight py-1 px-2 h-30">
+                If elite, premium, pavilions or any other HP desktop is not
+                working properly due to an error then connect to one of our
+                technicians at customer service number.
+              </p>
+              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
+                Install HP Smart
+              </button>
+            </div>
+            <div className="flex flex-col items-center h-[90%] px-4 py-2">
+              <Image
+                className="h-34"
+                src="/scan-print-fix.png"
+                height={250}
+                width={300}
+                alt="windows-11"
+              ></Image>
+              <h4 className=" flex items-center text-2xl font-medium h-20 px-2">
+                How to print, scan and fax
+              </h4>
+              <p className=" text-base font-extralight py-1 px-2 h-30">
+                Click Print Scan Fax for instructions on how to print, scan and
+                fax with your HP Printer using Windows or Mac OS.
+              </p>
+              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
+                Fix Scan/Print
+              </button>
+            </div>
+            <div className="flex flex-col items-center h-[90%] px-4 py-2">
+              <Image
+                className="h-34"
+                src="/printer-offline.png"
+                height={250}
+                width={300}
+                alt="windows-11"
+              ></Image>
+              <h4 className=" text-2xl font-medium h-20 px-2">
+                Printer offline or print job stuck in queue?
+              </h4>
+              <p className=" text-base font-extralight py-1 h-30">
+                Use this Windows automated tool to diagnose and fix printer
+                problems such as printer offline and print jobs stuck in queue.
+              </p>
+              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
+                Fix your Printer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center relative h-screen w-full">
+          <div className="flex pt-5 px-4 h-2/3 bg-[#F7F7F7]">
+            <div className="flex flex-col items-center w-1/2 h-full ">
+              <div className="flex gap-2 mt-8 px-8">
+                <Image
+                  src="/find-printer-icon.svg"
+                  height={150}
+                  width={150}
+                  alt="find printer icon"
+                ></Image>
+                <h2 className="text-4xl text-[#080880] font-extralight">
+                  Identify your printer for manuals and specific product
+                  information
+                </h2>
+              </div>
+              <div>
+                <p className="text-lg mt-3 mb-2 pt-4">
+                  Enter your serial number, product number or product name
+                </p>
+                <div>
+                  <form action="">
+                    <input
+                      type="text"
+                      placeholder="Example: HP DeskJet 2632 All-in-One printer"
+                      className="h-12 w-[90%] border-1 rounded-full px-4 py-2 border-black/20 outline-[#4343d8]"
+                    ></input>
+                  </form>
+                </div>
+                <a href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
+                  <button
+                    type="submit"
+                    className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4"
+                  >
+                    Submit
+                  </button>
+                </a>
+              </div>
+            </div>
+            <div className="flex gap-2 items-center w-1/2 h-full">
+              <div className="border-l border-black/20 m-5 overflow-hidden w-full h-full flex items-center justify-center">
+                <motion.div
+                  key={index}
+                  initial={{ x: 100 ,opacity:0}}
+                  animate={{ x: 0, opacity:1 }}
+                  exit={{ x: -100, opacity:0 }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                  className=" relative flex gap-6"
+                >
+                  <Image
+                    src={images[index]}
+                    height={450}
+                    width={550}
+                    alt={`printer-${index}`}
+                  />
+                </motion.div>
+              </div>
+            </div>
+          </div>
+          <div className="absolute bottom-3 h-1/4 w-3/5 overflow-hidden flex items-center justify-center">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={sliderIndex}
+                initial={{ x: 100 ,opacity:0}}
+                animate={{ x: 0, opacity:1 }}
+                exit={{ x: -100, opacity:0 }}
+                transition={{ duration: 1, ease: "easeInOut" }}
+                className="absolute w-full h-full"
+              >
+                <Image
+                  src={slider[sliderIndex]}
+                  height={100}
+                  width={900}
+                  alt={`slider-${sliderIndex}`}
+                  className="object-cover rounded-md"
+                />
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </div>
+      </div>
+    </main>
   );
 }
