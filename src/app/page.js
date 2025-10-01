@@ -78,7 +78,7 @@ export default function Home() {
               <ul className="flex flex-col gap-2 px-4 text-xs lg:text-base list-disc mx-2 lg:mx-8">
                 <li>
                   Experience Fast and Complimentary Support from Our Experts.
-                  We're here to help!
+                  We&apos;re here to help!  
                 </li>
                 <li>
                   Our priority is to take care of you. Call us to resolve
