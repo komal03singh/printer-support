@@ -11,10 +11,10 @@ import Link from "next/link";
 
 export default function Home() {
   const images = ["/NSLaser.avif", "/Envy.avif", "/Deskjet.avif"];
-  const slider = ["/slider-1.webp","/slider-2.webp"]
+  const slider = ["/slider-1.webp", "/slider-2.webp"];
 
   const [index, setIndex] = useState(0);
-  const [sliderIndex, setSliderIndex] = useState(0)
+  const [sliderIndex, setSliderIndex] = useState(0);
 
   // Auto-change index every 3s
   useEffect(() => {
@@ -78,7 +78,7 @@ export default function Home() {
               <ul className="flex flex-col gap-2 px-4 text-xs lg:text-base list-disc mx-2 lg:mx-8">
                 <li>
                   Experience Fast and Complimentary Support from Our Experts.
-                  We&apos;re here to help!  
+                  We&apos;re here to help!
                 </li>
                 <li>
                   Our priority is to take care of you. Call us to resolve
@@ -87,10 +87,11 @@ export default function Home() {
               </ul>
               <Link href="https://globaltecheye.com/blogs/printer/fix-printer-scan.php">
                 <p className="px-4 text-xs lg:text-base text-blue-400 flex justify-center items-center gap-1 mt-3 lg:mt-6">
-                Visit the FAQ page for help. Troubleshooting, and additional information
-                <span className="text-xs">
-                  <SlArrowRight />
-                </span>
+                  Visit the FAQ page for help. Troubleshooting, and additional
+                  information
+                  <span className="text-xs">
+                    <SlArrowRight />
+                  </span>
                 </p>
               </Link>
             </div>
@@ -99,19 +100,47 @@ export default function Home() {
           <div className="hidden lg:flex gap-16 flex-row justify-center items-center h-1/4 w-full rounded-t-2xl">
             <div className="p-2 flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <VscDesktopDownload className="text-5xl text-[#080880]" />
-              <p className="p-2 text-base font-light">Download Drivers</p>
+              <a
+                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-1 text-base font-light hover:text-blue-400"
+              >
+                Download Drivers
+              </a>
             </div>
             <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="text-5xl text-[#080880]" />
-              <p className="p-2 text-base font-light">Check Warranty Status</p>
+              <a
+                href="https://globaltecheye.com/blogs/printer/check-warranty.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-1 text-base font-light hover:text-blue-400"
+              >
+                Check Warranty Status
+              </a>
             </div>
             <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <BiSupport className="text-6xl text-[#080880]" />
-              <p className="p-2 text-base font-light">Contact Us</p>
+              <a
+                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-1 text-base font-light hover:text-blue-400"
+              >
+                Contact Us
+              </a>
             </div>
             <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <RiChatSmile2Fill className="text-6xl text-[#080880]" />
-              <p className="p-2 text-base font-light">Diagnose and Fix</p>
+              <a
+                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="py-1 text-base font-light hover:text-blue-400"
+              >
+                Diagnose and Fix
+              </a>
             </div>
           </div>
         </div>
@@ -136,54 +165,68 @@ export default function Home() {
                   Access Printer Setup to walk through the process of
                   installation, configuration, and registration of your printer.
                 </h3>
-                <button className="flex items-center gap-2 text-base lg:text-lg font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
-                  Printer Setup{" "}
-                  <span className="text-sm">
-                    <SlArrowRight />
-                  </span>
-                </button>
+                <Link href="https://globaltecheye.com/blogs/printer/find-printer.php">
+                  <button className="flex items-center gap-2 text-base lg:text-lg font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
+                    Printer Setup{" "}
+                    <span className="text-sm">
+                      <SlArrowRight />
+                    </span>
+                  </button>
+                </Link>
                 <div className=" mt-5 lg:mt-10">
                   <p className="text-base lg:text-xl font-medium">
                     Want more Support?
                   </p>
-                  <p className="text-[#080880] underline">
-                    Get instant support here
-                  </p>
+                  <Link href="https://globaltecheye.com/blogs/printer/find-printer.php">
+                    <p className="text-[#080880] underline">
+                      Get instant support here
+                    </p>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex lg:hidden justify-center items-center h-1/5 w-full mb-3">
-            <div className="p-2 flex flex-col justify-center items-center gap-1 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
-              <VscDesktopDownload className="text-3xl text-[#080880]" />
-              <p className="py-1 text-sm font-light">Download Drivers</p>
+          <div className="flex lg:hidden justify-center items-center h-1/5 w-full mb-3 px-2 py-4 bg-blue-100">
+
+            <div className="w-1/4 h-full p-2 flex flex-col justify-center items-center gap-1 hover:cursor-pointer">
+              <VscDesktopDownload className="h-2/5 w-full text-2xl text-[#080880]" />
+              <a
+                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
+              >
+                Download Drivers
+              </a>
             </div>
-            <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
-              <GrDocumentTime className="text-3xl text-[#080880]" />
-              <p className="py-1 text-sm font-light">Check Warranty </p>
+
+            <div className="p-2 w-1/4 h-full flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <GrDocumentTime className="h-2/5 w-full text-2xl text-[#080880]" />
+                <p className="h-3/5 py-1 px-2 text-base font-light">Check Warranty </p>
             </div>
-            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
-              <BiSupport className="text-3xl text-[#080880]" />
-              <p className="py-1 text-sm font-light">Contact Us</p>
+
+            <div className="w-1/4 h-full p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <BiSupport className="h-2/5 w-full text-2xl text-[#080880]" />
+              <p className="h-3/5 py-1 px-2 text-base font-light">Contact Us</p>
             </div>
-            <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
-              <RiChatSmile2Fill className="text-3xl text-[#080880]" />
-              <p className="py-1 text-sm font-light">Diagnose and Fix</p>
+            <div className="w-1/4 h-full flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+              <RiChatSmile2Fill className="h-2/5 w-full text-xl text-[#080880]" />
+              <p className="h-3/5 py-1 px-2 text-base font-light">Diagnose and Fix</p>
             </div>
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-6 h-screen w-full px-4">
-          <h2 className="text-5xl text-[#080880] font-semibold pt-5">
+        <div className="flex flex-col items-center gap-6 h-auto lg:h-screen w-full px-4 mt-10 lg:mt-0">
+          <h2 className="text-2xl lg:text-5xl text-[#080880] font-semibold pt-5">
             We provide solutions for
           </h2>
 
-          <div className="text-xl font-extralight">
+          <div className="text-base lg:text-xl font-extralight">
             Storage | Software Download | Installation Issues | Network
             Connectivity Related Issues
           </div>
 
-          <div className="grid grid-cols-3 items-center h-3/4 w-320 mt-2 px-4 gap-6">
+          <div className="flex flex-col lg:grid lg:grid-cols-3 items-center h-3/4 w-full lg:w-320 mt-2 px-4 gap-6">
             <div className="flex flex-col items-center h-[90%] px-4 py-2">
               <Image
                 className="h-34"
@@ -200,9 +243,12 @@ export default function Home() {
                 working properly due to an error then connect to one of our
                 technicians at customer service number.
               </p>
-              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
-                Install HP Smart
-              </button>
+              <Link  href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
+                <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
+                  Install HP Smart
+                </button>
+              </Link>
+              
             </div>
             <div className="flex flex-col items-center h-[90%] px-4 py-2">
               <Image
@@ -212,18 +258,20 @@ export default function Home() {
                 width={300}
                 alt="windows-11"
               ></Image>
-              <h4 className=" flex items-center text-2xl font-medium h-20 px-2">
+              <h4 className="flex items-center text-2xl font-medium h-20 px-2">
                 How to print, scan and fax
               </h4>
-              <p className=" text-base font-extralight py-1 px-2 h-30">
+              <p className="text-base font-extralight py-1 px-2 h-30">
                 Click Print Scan Fax for instructions on how to print, scan and
                 fax with your HP Printer using Windows or Mac OS.
               </p>
-              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
-                Fix Scan/Print
-              </button>
+              <Link href="https://globaltecheye.com/blogs/printer/fix-printer-scan.php">
+                <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
+                  Fix Scan/Print
+                </button>
+              </Link>
             </div>
-            <div className="flex flex-col items-center h-[90%] px-4 py-2">
+            <div className="flex flex-col items-center h-[90%] w-full px-4 py-2">
               <Image
                 className="h-34"
                 src="/printer-offline.png"
@@ -238,16 +286,18 @@ export default function Home() {
                 Use this Windows automated tool to diagnose and fix printer
                 problems such as printer offline and print jobs stuck in queue.
               </p>
-              <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
-                Fix your Printer
-              </button>
+              <Link href="https://globaltecheye.com/blogs/printer/https://globaltecheye.com/blogs/printer/find-printer.php">
+                <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
+                  Fix your Printer
+                </button>
+              </Link>
             </div>
           </div>
         </div>
 
         <div className="flex justify-center relative h-screen w-full">
-          <div className="flex pt-5 px-4 h-2/3 bg-[#F7F7F7]">
-            <div className="flex flex-col items-center w-1/2 h-full ">
+          <div className="flex flex-col lg:flex-row pt-3 lg:pt-5 px-4 lg:h-2/3 bg-[#F7F7F7]">
+            <div className="flex flex-col items-center w-full h-1/2 lg:w-1/2 lg:h-full ">
               <div className="flex gap-2 mt-8 px-8">
                 <Image
                   src="/find-printer-icon.svg"
@@ -255,13 +305,13 @@ export default function Home() {
                   width={150}
                   alt="find printer icon"
                 ></Image>
-                <h2 className="text-4xl text-[#080880] font-extralight">
+                <h2 className="text-xl lg:text-4xl text-[#080880] font-extralight">
                   Identify your printer for manuals and specific product
                   information
                 </h2>
               </div>
-              <div>
-                <p className="text-lg mt-3 mb-2 pt-4">
+              <div className="px-4 lg:px-0">
+                <p className="text-base lg:text-lg mt-3 mb-2 pt-4">
                   Enter your serial number, product number or product name
                 </p>
                 <div>
@@ -276,20 +326,20 @@ export default function Home() {
                 <a href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
                   <button
                     type="submit"
-                    className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4"
+                    className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-4"
                   >
                     Submit
                   </button>
                 </a>
               </div>
             </div>
-            <div className="flex gap-2 items-center w-1/2 h-full">
-              <div className="border-l border-black/20 m-5 overflow-hidden w-full h-full flex items-center justify-center">
+            <div className="flex gap-2 items-center w-full h-2/5 lg:w-1/2 lg:h-full">
+              <div className=" border-black/20 m-5 overflow-hidden w-full h-full flex items-center justify-center">
                 <motion.div
                   key={index}
-                  initial={{ x: 100 ,opacity:0}}
-                  animate={{ x: 0, opacity:1 }}
-                  exit={{ x: -100, opacity:0 }}
+                  initial={{ x: 100, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  exit={{ x: -100, opacity: 0 }}
                   transition={{ duration: 1, ease: "easeInOut" }}
                   className=" relative flex gap-6"
                 >
@@ -303,13 +353,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="absolute bottom-3 h-1/4 w-3/5 overflow-hidden flex items-center justify-center">
+          <div className="absolute bottom-0 lg:bottom-3 h-15 w-4/5 lg:h-1/4 lg:w-3/5 overflow-hidden flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div
                 key={sliderIndex}
-                initial={{ x: 100 ,opacity:0}}
-                animate={{ x: 0, opacity:1 }}
-                exit={{ x: -100, opacity:0 }}
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: -100, opacity: 0 }}
                 transition={{ duration: 1, ease: "easeInOut" }}
                 className="absolute w-full h-full"
               >
