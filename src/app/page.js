@@ -85,7 +85,7 @@ export default function Home() {
                   questions about HP+ and receive assistance with printer setup.
                 </li>
               </ul>
-              <Link href="https://globaltecheye.com/blogs/printer/fix-printer-scan.php">
+              <Link href="/Troubleshoot">
                 <p className="px-4 text-xs lg:text-base text-blue-400 flex justify-center items-center gap-1 mt-3 lg:mt-6">
                   Visit the FAQ page for help. Troubleshooting, and additional
                   information
