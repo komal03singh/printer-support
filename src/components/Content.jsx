@@ -7,7 +7,7 @@ function content({activeTab}) {
   return (
      <div className='h-3/5 w-full '>
       <div
-      className='h-full w-full mx-6'>
+      className='h-full w-full'>
         {activeTab ==='howPrint' && 
         <div className='h-full w-full'>
           <HowPrint/>

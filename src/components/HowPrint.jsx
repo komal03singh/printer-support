@@ -3,11 +3,11 @@ import React from 'react'
 function howPrint() {
   return (
     <div className='h-full w-full'>
-      <div className='h-full w-full flex justify-center gap-8 pt-10'>
-        <div>
+      <div className='h-full w-full flex justify-center gap-8 pt-6'>
+        <div className='w-1/4 mt-8'>
           <img src="/howPrint/printer-img1.avif" height={150} width={300} alt="" />
         </div>
-        <div className='px-4 py-2'>
+        <div className='w-1/2 px-4 py-2'>
           <h1 className='text-3xl font-semibold text-[#080880]'>How to Print</h1>
           <p className='text-lg font-light py-2'>You can learn how to print from a USB or wirelessly-connected HP printer by following the steps below.</p>
           <ol className='flex flex-col gap-1 text-base font-light list-decimal list-inside'>

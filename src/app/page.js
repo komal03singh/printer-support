@@ -101,7 +101,7 @@ export default function Home() {
             <div className="p-2 flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <VscDesktopDownload className="text-5xl text-[#080880]" />
               <a
-                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                href="/InstallHPSmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-1 text-base font-light hover:text-blue-400"
@@ -123,7 +123,7 @@ export default function Home() {
             <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <BiSupport className="text-6xl text-[#080880]" />
               <a
-                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                href="/InstallHPSmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-1 text-base font-light hover:text-blue-400"
@@ -134,7 +134,7 @@ export default function Home() {
             <div className="p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <RiChatSmile2Fill className="text-6xl text-[#080880]" />
               <a
-                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                href="/InstallHPSmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-1 text-base font-light hover:text-blue-400"
@@ -165,7 +165,7 @@ export default function Home() {
                   Access Printer Setup to walk through the process of
                   installation, configuration, and registration of your printer.
                 </h3>
-                <Link href="https://globaltecheye.com/blogs/printer/find-printer.php">
+                <Link href="/PrinterSetup">
                   <button className="flex items-center gap-2 text-base lg:text-lg font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
                     Printer Setup{" "}
                     <span className="text-sm">
@@ -177,7 +177,7 @@ export default function Home() {
                   <p className="text-base lg:text-xl font-medium">
                     Want more Support?
                   </p>
-                  <Link href="https://globaltecheye.com/blogs/printer/find-printer.php">
+                  <Link href="/PrinterSetup">
                     <p className="text-[#080880] underline">
                       Get instant support here
                     </p>
@@ -243,7 +243,7 @@ export default function Home() {
                 working properly due to an error then connect to one of our
                 technicians at customer service number.
               </p>
-              <Link  href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
+              <Link  href="/InstallHPSmart">
                 <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
                   Install HP Smart
                 </button>
@@ -265,7 +265,7 @@ export default function Home() {
                 Click Print Scan Fax for instructions on how to print, scan and
                 fax with your HP Printer using Windows or Mac OS.
               </p>
-              <Link href="https://globaltecheye.com/blogs/printer/fix-printer-scan.php">
+              <Link href="Troubleshoot">
                 <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-2">
                   Fix Scan/Print
                 </button>
@@ -353,6 +353,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          
           <div className="absolute bottom-0 lg:bottom-3 h-15 w-4/5 lg:h-1/4 lg:w-3/5 overflow-hidden flex items-center justify-center">
             <AnimatePresence mode="wait">
               <motion.div

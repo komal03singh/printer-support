@@ -2,26 +2,21 @@ import React from 'react'
 
 function howFax() {
   return (
-    <div className='h-full w-full'>
-      <div className='h-full w-full flex justify-center gap-8 pt-10'>
-        <div>
+    <div className='h-full w-full pt-6'>
+      <div className='h-full w-full flex justify-center gap-8'>
+        <div className='w-1/4 mt-8'>
           <img src="/howFax/printer-img3.avif" height={150} width={300} alt="" />
         </div>
-        <div className='px-4 py-2'>
-          <h1 className='text-3xl font-semibold text-[#080880]'>How to Print</h1>
-          <p className='text-lg font-light py-2'>You can learn how to print from a USB or wirelessly-connected HP printer by following the steps below.</p>
+        <div className='w-1/2 px-4 py-2'>
+          <h1 className='text-3xl font-semibold text-[#080880]'>HP Printers - Sending and receiving fax</h1>
+          <p className='text-lg font-light py-2'>You can learn how to fax from a fax-enabled HP printer by following the steps below.</p>
           <ol className='flex flex-col gap-1 text-base font-light list-decimal list-inside'>
-            <li>Select the file you want to print and open the file so it appears on your computer screen.</li>
-            <li>Press the Ctrl and P buttons on your keyboard at the same time.</li>
-            <li>
-              Once the printing pop-up menu appears on your computer screen, select the printer you intend to send the job to.
-              <ul className='list-disc list-inside ml-6'>
-                <li>If the printer is not connected, get help setting it up through the Technical Assitance.</li>
-                <li>For wireless printer setup and connection, get help Technical Support.</li>
-              </ul>
-            </li>
-            <li>If needed, modify your print settings. This step is optional.</li>
-            <li>Click the Print button on screen to send the job into the printer print queue and wait for the job to complete.</li>
+            <li>Ensure the printer is connected and set up properly.</li>
+            <li>Load the sheets you are intending to fax into the input tray and adjust the width guides so that they rest against the edges of the paper. The printer should indicate whether the printed side of the page(s) should face up or down.</li>
+            <li>For multifunction HP printers, there may be an option to select Fax. Complete this step before moving on.</li>
+            <li>If needed, modify the fax settings. This step is optional.</li>
+            <li>Dial the fax number you are wanting to send the fax to. Be sure to include any dial codes and extensions necessary to route the call correctly.</li>
+            <li>Press Start, Send, Go, or a start fax-equivalent button.</li>
           </ol>
         </div>
       </div>
