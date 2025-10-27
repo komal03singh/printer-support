@@ -20,9 +20,9 @@ function InstallHPSmart() {
 
   return (
     <div>
-      <div className="h-[360px] w-full bg-[#f7f7f7]">
-        <div className="h-full w-full flex">
-          <div className="w-2/5 flex justify-center ">
+      <div className="lg:h-[360px] w-full bg-[#f7f7f7]">
+        <div className="h-full w-full flex flex-col lg:flex-row gap-4 lg:gap-0">
+          <div className="lg:w-2/5 flex justify-center mt-5 lg:mt-0 ">
             <div className="flex flex-col items-center justify-center">
               <Image
                 src="/hp-smart-app-icon.png"
@@ -31,18 +31,18 @@ function InstallHPSmart() {
                 height={80}
                 width={80}
               ></Image>
-              <h3 className="pt-4 text-3xl">HP Smart</h3>
-              <div className="mt-6 text-xl font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white">
-                <Link href="#" className="w-75">
+              <h3 className="pt-4 text-xl lg:text-3xl">HP Smart</h3>
+              <div className="mt-6 text-base lg:text-xl font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white">
+                <Link href="/DriverInstallation" className="w-75">
                   Install Now
                 </Link>
               </div>
-              <div className="pt-4 text-lg">
+              <div className="pt-4 text-sm lg:text-lg">
                 <p>Connects seamlessly with your HP printer</p>
               </div>
             </div>
           </div>
-          <div className="w-3/5 flex justify-center py-2">
+          <div className="lg:w-3/5 flex justify-center px-4 lg:px-0 py-2">
             <Image
               src="/InstallHPSmart/hp-smart.webp"
               className="rounded-xl"
@@ -53,8 +53,8 @@ function InstallHPSmart() {
           </div>
         </div>
 
-        <div className="mt-14 mx-14 flex gap-4">
-          <div className="px-4 py-2 w-3/5 text-base font-light">
+        <div className="mt-5 lg:mt-14 mx-14 flex flex-col lg:flex-row gap-4">
+          <div className="px-4 py-2 lg:w-3/5 text-base font-light">
             <p className="">
               Print, scan, and share files by using HP Smart with your HP
               Printer. HP Smart makes it easy to get started and keeps you going
@@ -101,7 +101,7 @@ function InstallHPSmart() {
             account for full functionality. Certain features/software are
             available in English language only. <p></p>
           </div>
-          <div className="w-2/5">
+          <div className="lg:w-2/5">
             <Image
               src="/InstallHPSmart/app-home-page.webp"
               className="rounded-xl"
@@ -131,16 +131,16 @@ function InstallHPSmart() {
                 width={300}
                 alt="windows-11"
               ></Image>
-              <h4 className=" text-2xl font-medium h-20 px-2 pt-4">
+              <h4 className="text-lg lg:text-2xl font-medium h-20 px-2 pt-4">
                 Get Instant Support for Laptop & Desktop
               </h4>
-              <p className=" text-base font-extralight py-1 px-2 h-30">
+              <p className="text-sm lg:text-base font-extralight py-1 px-2 h-30">
                 If elite, premium, pavilions or any other HP desktop is not
                 working properly due to an error then connect to one of our
                 technicians at customer service number.
               </p>
               <Link href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
-                <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
+                <button className="flex items-center gap-2 text-sm lg:text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
                   Call Technician
                 </button>
               </Link>
@@ -154,16 +154,16 @@ function InstallHPSmart() {
                 width={300}
                 alt="windows-11"
               ></Image>
-              <h4 className="text-2xl font-medium h-20 px-2 pt-4">
+              <h4 className="text-lg lg:text-2xl font-medium h-20 px-2 pt-4">
                 Support for the Driver Download & Installation
               </h4>
-              <p className="text-base font-extralight py-1 px-2 h-30">
+              <p className="text-sm lg:text-base font-extralight py-1 px-2 h-30">
                 Finding and then installing the drivers for laptops, desktops,
                 and printers is a task that requires a lot of attention and
                 time. But our support services can make it so easy.
               </p>
               <Link href="/Troubleshoot">
-                <button className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
+                <button className="flex items-center gap-2 text-sm lg:text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-2">
                   Fix/Scan Print
                 </button>
               </Link>
@@ -171,7 +171,7 @@ function InstallHPSmart() {
           </div>
         </div>
 
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center lg:w-full">
             <div className="items-center justify-center overflow-hidden">
                 <AnimatePresence mode="wait">
                 <motion.div
@@ -180,7 +180,7 @@ function InstallHPSmart() {
                     animate={{ x: 0, opacity: 1 }}
                     exit={{ x: -100, opacity: 0 }}
                     transition={{ duration: 1, ease: "easeInOut" }}
-                    className="w-full h-full"
+                    className="w-[90%] lg:w-full h-full"
                     >
                 <Image
                     src={slider[sliderIndex]}
@@ -194,7 +194,7 @@ function InstallHPSmart() {
             </div>
         </div>
 
-        <div className=" bg-black/80 h-20 text-white flex items-center justify-center font-light text-sm mt-6">
+        <div className=" bg-black/80 h-20 text-white flex items-center justify-center font-light text-xs lg:text-sm mt-6 px-4 lg:px-0">
           <p>
             ©{new Date().getFullYear()} HP Go Wireless Setup. The information
             contained herein is subject to change without notice.

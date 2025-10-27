@@ -323,7 +323,7 @@ export default function Home() {
                     ></input>
                   </form>
                 </div>
-                <a href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
+                <a href="/InstallHPSmart">
                   <button
                     type="submit"
                     className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-4"

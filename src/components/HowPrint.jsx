@@ -3,14 +3,14 @@ import React from 'react'
 function howPrint() {
   return (
     <div className='h-full w-full'>
-      <div className='h-full w-full flex justify-center gap-8 pt-6'>
-        <div className='w-1/4 mt-8'>
+      <div className='h-full w-full flex flex-col lg:flex-row items-center lg:justify-center gap-8 pt-6'>
+        <div className='lg:w-1/4 lg:mt-8'>
           <img src="/howPrint/printer-img1.avif" height={150} width={300} alt="" />
         </div>
-        <div className='w-1/2 px-4 py-2'>
-          <h1 className='text-3xl font-semibold text-[#080880]'>How to Print</h1>
-          <p className='text-lg font-light py-2'>You can learn how to print from a USB or wirelessly-connected HP printer by following the steps below.</p>
-          <ol className='flex flex-col gap-1 text-base font-light list-decimal list-inside'>
+        <div className='lg:w-1/2 px-4 lg:py-2'>
+          <h1 className='text-2xl lg:text-3xl font-semibold text-[#080880]'>How to Print</h1>
+          <p className='text-base lg:text-lg font-light py-2'>You can learn how to print from a USB or wirelessly-connected HP printer by following the steps below.</p>
+          <ol className='text-sm flex flex-col gap-1 lg:text-base font-light list-decimal list-inside'>
             <li>Select the file you want to print and open the file so it appears on your computer screen.</li>
             <li>Press the Ctrl and P buttons on your keyboard at the same time.</li>
             <li>

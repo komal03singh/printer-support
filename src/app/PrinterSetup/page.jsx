@@ -18,18 +18,18 @@ function PrinterSetup() {
 
   return (
     <div className="h-screen w-full">
-      <div className="mt-14 mx-14 flex gap-4">
-        <div className="flex flex-col gap-3 px-4 py-2 w-3/5 text-base font-light">
-            <h2 className="text-4xl font-extrabold">
+      <div className="mt-8 lg:mt-14 mx-10 lg:mx-14 flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col gap-3 px-4 py-2 lg:w-3/5 text-base font-light">
+            <h2 className="text-2xl lg:text-4xl font-extrabold">
                 We're here to help you set up your HP printer
             </h2>
-            <p className="text-lg font-light">
+            <p className="text-sm lg:text-lg font-light">
                 Let's connect your printer to a Wi-Fi or wired network or to a computer using a USB cable, but first, we need to know your printer model.
             </p>
           
             
         </div>
-        <div className="w-2/5">
+        <div className="lg:w-2/5">
           <Image
             src="/PrinterSetup/Printer_Setup_Landing.webp"
             className="rounded-xl"
@@ -40,7 +40,7 @@ function PrinterSetup() {
         </div>
       </div>
 
-      <div className="flex flex-col lg:flex-row pt-3 lg:pt-5 px-4 lg:h-2/3 bg-[#F7F7F7]">
+      <div className="flex flex-col mt-8 lg:mt-0 lg:flex-row pt-6 lg:pt-5 px-4 lg:h-2/3 bg-[#F7F7F7]">
         <div className="flex flex-col items-center justify-center w-full h-1/2 lg:w-1/2 lg:h-full ">
           <form className="w-3/4 text-base" action="">
 
@@ -55,7 +55,7 @@ function PrinterSetup() {
             </div>
 
           </form>
-          <div className="px-4 lg:px-0">
+          <div className="px-8 lg:px-0">
             <p className="text-base lg:text-lg mt-3 mb-2 pt-4">
               Enter your serial number, product number or product name
             </p>
@@ -68,7 +68,7 @@ function PrinterSetup() {
                 ></input>
               </form>
             </div>
-            <a href="https://globaltecheye.com/blogs/printer/hp-smart-install.php">
+            <a href="/InstallHPSmart">
               <button
                 type="submit"
                 className="flex items-center gap-2 text-base font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-6 lg:mt-4"

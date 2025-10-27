@@ -3,14 +3,14 @@ import React from 'react'
 function howScan() {
   return (
     <div className='h-full w-full'>
-      <div className='h-full w-full flex justify-center gap-8 pt-8'>
-        <div className='w-1/4 mt-8'>
+      <div className='h-full w-full flex flex-col lg:flex-row items-center lg:justify-center gap-8 pt-8'>
+        <div className='lg:w-1/4 lg:mt-8'>
           <img src="/howScan/printerimg2.avif" height={150} width={300} alt="" />
         </div>
-        <div className='w-1/2 px-4 py-2'>
-          <h1 className='text-3xl font-semibold text-[#080880]'>How to Scan on a Windows Computer</h1>
-          <p className='text-lg font-light py-2'>You can learn how to scan documents or photos from a USB or wirelessly-connected multifunction HP printer to a Windows computer by using the steps below.</p>
-          <ol className='flex flex-col gap-1 text-base font-light list-decimal list-inside'>
+        <div className='lg:w-1/2 px-4 py-2'>
+          <h1 className='text-2xl lg:text-3xl font-semibold text-[#080880]'>How to Scan on a Windows Computer</h1>
+          <p className='text-base lg:text-lg font-light py-2'>You can learn how to scan documents or photos from a USB or wirelessly-connected multifunction HP printer to a Windows computer by using the steps below.</p>
+          <ol className='text-sm flex flex-col gap-1 lg:text-base font-light list-decimal list-inside'>
             <li>Software is required to scan a document. Make sure the latest Full Feature Software and Drivers for the printer is downloaded and installed. Start by going to Customer Support Software and Driver Downloads</li>
             <li>Load the item on the scanner glass or in the automatic document feeder (ADF), depending on your printer type and features.</li>
             <li>
