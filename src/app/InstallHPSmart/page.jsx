@@ -4,22 +4,60 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useRouter } from "next/navigation";
+
 
 function InstallHPSmart() {
 
-    const slider = ["/slider-1.webp", "/slider-2.webp"];
-    const [sliderIndex, setSliderIndex] = useState(0);
+  const slider = ["/slider-1.webp", "/slider-2.webp"];
+  const [sliderIndex, setSliderIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
+  const router = useRouter();
 
-     useEffect(() => {
-        const interval = setInterval(() => {
-          setSliderIndex((prev) => (prev + 1) % slider.length);
-        }, 4000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSliderIndex((prev) => (prev + 1) % slider.length);
+    }, 4000);
     
-        return () => clearInterval(interval);
-      }, [slider.length]);
+    return () => clearInterval(interval);
+  }, [slider.length]);
+
+  const handleInstallClick = () => {
+    setShowPopup(true);
+
+    setTimeout(() => {
+      setShowPopup(false);
+      router.push("/DriverInstallation"); 
+    }, 15000);
+  };
 
   return (
-    <div>
+    <div className="relative">
+      {showPopup && (
+        <div className="fixed inset-0 bg-black/70 flex flex-col items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-8 shadow-xl flex flex-col items-center">
+            <Image
+              src="/loading.gif" 
+              alt="loading"
+              width={80}
+              height={80}
+              className="mb-4"
+            />
+            <p className="text-lg font-light text-gray-700">
+              Installing HP Smart... Please wait
+            </p>
+            <div className="w-64 mt-4 bg-gray-200 rounded-full h-2 overflow-hidden">
+              <motion.div
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 15, ease: "linear" }}
+                className="h-2 bg-[#080880]"
+              ></motion.div>
+            </div>
+          </div>
+        </div>
+      )}
+
       <div className="lg:h-[360px] w-full bg-[#f7f7f7]">
         <div className="h-full w-full flex flex-col lg:flex-row gap-4 lg:gap-0">
           <div className="lg:w-2/5 flex justify-center mt-5 lg:mt-0 ">
@@ -32,11 +70,12 @@ function InstallHPSmart() {
                 width={80}
               ></Image>
               <h3 className="pt-4 text-xl lg:text-3xl">HP Smart</h3>
-              <div className="mt-6 text-base lg:text-xl font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white">
-                <Link href="/DriverInstallation" className="w-75">
-                  Install Now
-                </Link>
-              </div>
+              <button
+                onClick={handleInstallClick}
+                className="mt-6 text-base lg:text-xl font-light bg-black/80 text-white px-6 py-2 rounded-full hover:bg-[#080880] transition-colors"
+              >
+                Install Now
+              </button>
               <div className="pt-4 text-sm lg:text-lg">
                 <p>Connects seamlessly with your HP printer</p>
               </div>

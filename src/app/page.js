@@ -112,7 +112,7 @@ export default function Home() {
             <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="text-5xl text-[#080880]" />
               <a
-                href="https://globaltecheye.com/blogs/printer/check-warranty.php"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-1 text-base font-light hover:text-blue-400"
@@ -191,7 +191,7 @@ export default function Home() {
             <div className="w-1/4 h-full p-2 flex flex-col justify-center items-center gap-1 hover:cursor-pointer">
               <VscDesktopDownload className="h-2/5 w-full text-2xl text-[#080880]" />
               <a
-                href="https://globaltecheye.com/blogs/printer/hp-smart-install.php"
+                href="/InstallHPSmart"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
@@ -202,16 +202,38 @@ export default function Home() {
 
             <div className="p-2 w-1/4 h-full flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="h-2/5 w-full text-2xl text-[#080880]" />
-                <p className="h-3/5 py-1 px-2 text-base font-light">Check Warranty </p>
+              <a
+                href="/InstallHPSmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
+              >
+                Check Warranty
+              </a>
+                
             </div>
 
             <div className="w-1/4 h-full p-2 flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <BiSupport className="h-2/5 w-full text-2xl text-[#080880]" />
-              <p className="h-3/5 py-1 px-2 text-base font-light">Contact Us</p>
+              <a
+                href="/InstallHPSmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
+              >
+                Contact Us
+              </a>
             </div>
             <div className="w-1/4 h-full flex flex-col items-center hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <RiChatSmile2Fill className="h-2/5 w-full text-xl text-[#080880]" />
-              <p className="h-3/5 py-1 px-2 text-base font-light">Diagnose and Fix</p>
+              <a
+                href="/InstallHPSmart"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
+              >
+                Diagnose and Fix
+              </a>
             </div>
           </div>
         </div>

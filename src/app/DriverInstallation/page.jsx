@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function DriverInstallation() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Top Banner */}
       <section className="bg-gradient-to-r from-[#0a2b6b] to-[#004aad] py-10 px-4 lg:px-0 text-center text-white">
         <div className="flex justify-center items-center gap-2 lg:gap-4">
             <Image src="/hp-icon.png" alt="logo" width={50} height={50}></Image>
@@ -20,9 +19,7 @@ export default function DriverInstallation() {
         </p>
       </section>
 
-      {/* Main Content */}
       <section className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left Image */}
         <div className="flex justify-center">
           <Image
             src="/error.jpg"
@@ -33,7 +30,7 @@ export default function DriverInstallation() {
           ></Image>
         </div>
 
-        {/* Right Content */}
+        
         <div>
           <h2 className="text-2xl font-bold text-gray-800 mb-4">
             Possible Reasons
@@ -43,7 +40,7 @@ export default function DriverInstallation() {
             <li>USB or Wi-Fi printer connection is unstable.</li>
           </ul>
 
-          {/* Support Section */}
+          
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-5 shadow-sm">
             <h3 className="text-lg font-semibold text-gray-800 mb-2">
               Need Help?
@@ -66,11 +63,12 @@ export default function DriverInstallation() {
                 Contact Page
               </Link>
             </div>
+            <p className="text-base mt-2">Or reach us via <span className="font-semibold">E-mail: info.digismartexpert@gmail.com</span></p>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      
       <footer className="text-center py-6 text-sm bg-black/80 text-white border-t">
         <p>
           © {new Date().getFullYear()} DRIVER_INSTALL_404  !ERROR
