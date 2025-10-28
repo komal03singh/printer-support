@@ -57,10 +57,10 @@ export default function DriverInstallation() {
                 href="tel:+18556637755"
                 className="bg-black/80 hover:bg-[#0a2b6b] text-white px-5 py-3 rounded-full text-center font-medium transition"
               >
-                Call Support: +1-855-663-7755
+                Call Support: +91-956-643-7330
               </a>
               <Link
-                href="/contact"
+                href="/Contact"
                 className="bg-[#004aad] hover:bg-[#0a2b6b] text-white px-5 py-3 rounded-full text-center font-medium transition"
               >
                 Contact Page
