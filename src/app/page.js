@@ -73,9 +73,9 @@ export default function Home() {
               ></Image>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center absolute bottom-1 left-2 lg:bottom-45 lg:left-32 w-[96%] h-[22%] lg:w-[54%] lg:h-[34%] bg-white lg:z-50 rounded-lg">
-            <div className="h-3/4 flex flex-col justify-center items-center">
-              <ul className="flex flex-col gap-2 px-4 text-xs lg:text-base list-disc mx-2 lg:mx-8">
+          <div className="hidden lg:flex flex-col justify-center items-center absolute bottom-0 left-2 lg:bottom-45 lg:left-32 w-[96%] h-[24%] lg:w-[54%] lg:h-[34%] bg-white lg:z-50 rounded-lg">
+            <div className="py-2 lg:py-0 flex flex-col justify-center">
+              <ul className="flex flex-col gap-1 lg:gap-2 px-2 lg:px-4 text-[8px] text-xs lg:text-base list-disc mx-2 lg:mx-8">
                 <li>
                   Experience Fast and Complimentary Support from Our Experts.
                   We&apos;re here to help!
@@ -85,15 +85,27 @@ export default function Home() {
                   questions about HP+ and receive assistance with printer setup.
                 </li>
               </ul>
-              <Link href="/Troubleshoot">
-                <p className="px-4 text-xs lg:text-base text-blue-400 flex justify-center items-center gap-1 mt-3 lg:mt-6">
-                  Visit the FAQ page for help. Troubleshooting, and additional
-                  information
-                  <span className="text-xs">
-                    <SlArrowRight />
-                  </span>
-                </p>
-              </Link>
+              <div className="flex flex-col mx-2 lg:mx-8">
+                <div className="px-2 w-[87%]">
+                  <Link className="w-4/5" href="/PrinterSetup">
+                    <button className="flex items-center gap-2 text-xs lg:text-sm font-light bg-black/80 text-white px-3 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-1 lg:mt-4">
+                      Printer Setup
+                      <span className="text-xs lg:text-sm">
+                        <SlArrowRight />
+                      </span>
+                    </button>
+                  </Link>
+                  <Link href="/Troubleshoot">
+                    <p className="px-2 text-xs lg:text-base text-blue-400 flex justify-center items-center gap-1 mt-3 lg:mt-2">
+                      Visit the FAQ page for help. Troubleshooting, and additional
+                      information
+                    <span className="text-xs">
+                      <SlArrowRight />
+                    </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -144,6 +156,40 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="lg:hidden py-2 px-5 mt-6 lg:py-0 flex flex-col justify-center">
+              <ul className="flex flex-col gap-1 lg:gap-2 px-2 lg:px-4 text-sm lg:text-base list-disc mx-2 lg:mx-8">
+                <li>
+                  Experience Fast and Complimentary Support from Our Experts.
+                  We&apos;re here to help!
+                </li>
+                <li>
+                  Our priority is to take care of you. Call us to resolve
+                  questions about HP+ and receive assistance with printer setup.
+                </li>
+              </ul>
+              <div className="flex flex-col lg:mx-8">
+                <div className="px-2 w-[87%]">
+                  <Link className="w-4/5" href="/PrinterSetup">
+                    <button className="mx-2 flex items-center gap-2 text-sm font-light bg-black/80 text-white px-3 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
+                      Printer Setup
+                      <span className="text-xs lg:text-sm">
+                        <SlArrowRight />
+                      </span>
+                    </button>
+                  </Link>
+                  <Link href="/Troubleshoot">
+                    <p className="px-2 text-sm lg:text-base text-blue-400 flex justify-center items-center mt-3 lg:mt-2">
+                      Visit the FAQ page for help. Troubleshooting, and additional
+                      information
+                    <span className="text-xs">
+                      <SlArrowRight />
+                    </span>
+                    </p>
+                  </Link>
+                </div>
+              </div>
+            </div>
 
         <div className="flex flex-col gap-6 h-screen w-full">
           <h3 className="text-2xl lg:text-5xl font-semibold text-[#080880] text-center pt-10">

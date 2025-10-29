@@ -10,7 +10,6 @@ export default function CheckWarranty() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    // This is a placeholder: replace with your API endpoint or processing logic
     console.log("Submitting:", { country, serial });
     setSubmitted(true);
     setTimeout(() => setSubmitted(false), 3000);
