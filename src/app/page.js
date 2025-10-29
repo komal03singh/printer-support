@@ -112,7 +112,7 @@ export default function Home() {
             <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="text-5xl text-[#080880]" />
               <a
-                href=""
+                href="/CheckWarranty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="py-1 text-base font-light hover:text-blue-400"
@@ -203,7 +203,7 @@ export default function Home() {
             <div className="p-2 w-1/4 h-full flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="h-2/5 w-full text-2xl text-[#080880]" />
               <a
-                href="/InstallHPSmart"
+                href="/CheckWarranty"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-3/5 py-1 px-2 text-base font-light hover:text-blue-400"
