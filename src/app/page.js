@@ -36,7 +36,7 @@ export default function Home() {
   return (
     <main>
       <div className="h-auto w-full">
-        <div className="lg:relative h-screen w-full">
+        <div className="lg:relative lg:h-screen w-full">
           <div className="lg:relative w-full lg:w-[88%] h-full text-white flex flex-col lg:flex-row lg:h-3/4 lg:mt-6 lg:mx-20">
             <div className="flex flex-col gap-4 relative lg:absolute lg:left-0 lg:top-0 bg-[#3871F2] w-full lg:h-full lg:[clip-path:polygon(70%_0,60%_70%,60%_100%,0_100%,0_0)] lg:z-10 ">
               <div className="flex flex-col lg:flex-row justify-center ml-4 lg:ml-12 gap-2 lg:gap-6 lg:w-1/2 mt-6 lg:mt-12">
@@ -121,7 +121,7 @@ export default function Home() {
                 Download Drivers
               </a>
             </div>
-            <div className="p-2  flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
+            <div className="p-2 flex flex-col items-center gap-2 hover:-translate-y-1 transition-all ease-in-out hover:cursor-pointer">
               <GrDocumentTime className="text-5xl text-[#080880]" />
               <a
                 href="/CheckWarranty"
@@ -157,7 +157,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="lg:hidden py-2 px-5 mt-6 lg:py-0 flex flex-col justify-center">
+        <div className="lg:hidden mt-5 py-2 px-5 flex flex-col justify-center">
               <ul className="flex flex-col gap-1 lg:gap-2 px-2 lg:px-4 text-sm lg:text-base list-disc mx-2 lg:mx-8">
                 <li>
                   Experience Fast and Complimentary Support from Our Experts.
