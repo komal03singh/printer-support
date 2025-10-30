@@ -38,8 +38,8 @@ export default function Home() {
       <div className="h-auto w-full">
         <div className="lg:relative h-screen w-full">
           <div className="lg:relative w-full lg:w-[88%] h-full text-white flex flex-col lg:flex-row lg:h-3/4 lg:mt-6 lg:mx-20">
-            <div className="flex flex-col gap-4 relative lg:absolute lg:left-0 lg:top-0 bg-[#3871F2] w-full h-full lg:[clip-path:polygon(70%_0,60%_70%,60%_100%,0_100%,0_0)] lg:z-10 ">
-              <div className="flex flex-col lg:flex-row justify-center ml-4 lg:ml-12 gap-3 lg:gap-6 lg:w-1/2 mt-6 lg:mt-12">
+            <div className="flex flex-col gap-4 relative lg:absolute lg:left-0 lg:top-0 bg-[#3871F2] w-full lg:h-full lg:[clip-path:polygon(70%_0,60%_70%,60%_100%,0_100%,0_0)] lg:z-10 ">
+              <div className="flex flex-col lg:flex-row justify-center ml-4 lg:ml-12 gap-2 lg:gap-6 lg:w-1/2 mt-6 lg:mt-12">
                 <Image
                   src="/hp-icon.png"
                   alt="logo"
@@ -47,15 +47,15 @@ export default function Home() {
                   height={100}
                 ></Image>
                 <div className="flex flex-col justify-center">
-                  <h1 className="text-2xl px-2 lg:text-4xl font-semibold">
+                  <h1 className="text-3xl px-2 lg:text-4xl font-semibold">
                     Exclusive Printer Support
                   </h1>
-                  <p className="text-base px-2 lg:text-xl font-extralight pt-2">
+                  <p className="text-lg px-2 lg:text-xl font-extralight pt-4 lg:pt-2">
                     Call now to speak directly with a live HP+ support expert.
                   </p>
                 </div>
               </div>
-              <div className="flex justify-center lg:hidden">
+              <div className="flex mt-4 lg:mt-0 justify-center lg:hidden">
                 <Image
                   src="/hero-image.webp"
                   alt="logo"
@@ -205,26 +205,26 @@ export default function Home() {
                 width={600}
               ></Image>
             </div>
-            <div className="flex flex-col lg:justify-center lg:items-center h-1/2 w-full lg:h-full lg:w-1/2">
-              <div className="lg:h-1/2 h-[90%] w-full mx-6 border-l-3 border-[#080880] px-6 py-3 my-3 lg:my-0">
+            <div className="flex flex-col lg:justify-center px-3 lg:px-0 lg:items-center h-1/2 w-full lg:h-full lg:w-1/2">
+              <div className="lg:h-1/2 h-[90%] w-full lg:mx-6 border-l-3 border-[#080880] px-6 py-2 my-3 lg:my-0">
                 <h3 className="text-base lg:text-xl font-light">
                   Access Printer Setup to walk through the process of
                   installation, configuration, and registration of your printer.
                 </h3>
                 <Link href="/PrinterSetup">
-                  <button className="flex items-center gap-2 text-base lg:text-lg font-light bg-black/80 text-white px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
-                    Printer Setup{" "}
+                  <button className="flex items-center gap-1 lg:gap-2 text-sm lg:text-lg font-light bg-black/80 text-white px-3 lg:px-6 py-2 rounded-full hover:cursor-pointer hover:bg-[#080880] hover:text-white mt-4">
+                    Printer Setup
                     <span className="text-sm">
                       <SlArrowRight />
                     </span>
                   </button>
                 </Link>
-                <div className=" mt-5 lg:mt-10">
-                  <p className="text-base lg:text-xl font-medium">
+                <div className=" mt-2 lg:mt-10">
+                  <p className="text-sm lg:text-xl font-medium">
                     Want more Support?
                   </p>
                   <Link href="/PrinterSetup">
-                    <p className="text-[#080880] underline">
+                    <p className="text-sm text-[#080880] underline">
                       Get instant support here
                     </p>
                   </Link>
