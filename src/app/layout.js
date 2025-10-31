@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html name="viewport" content="width=device-width, initial-scale=1" lang="en">
       <body
         className={`${mulish.variable}} antialiased`}
       >
